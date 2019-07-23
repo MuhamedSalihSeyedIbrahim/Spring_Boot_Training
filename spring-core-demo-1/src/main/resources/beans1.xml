@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="gs1" class="in.tp.scd.service.GreetServiceStandardImp" />
+
+
+
+<bean id="gs3" class="in.tp.scd.service.GreetServiceArgumentedImp" >
+<constructor-arg index="0" value="Namaskar"></constructor-arg>
+</bean>
+
+
+<bean id="gs4" class="in.tp.scd.service.GreetSreviceAdvancedImp" >
+<property name="gnp">
+<bean class="in.tp.scd.service.GreetNoteProviderTimeBasedImp"/>
+</property>
+</bean>
+
+<!--  
+<bean id="gs5" class="in.tp.scd.service.GreetServiceArgumentedImp">
+<property name="refer" ref="gs1" />
+</bean>
+-->
+</beans>
