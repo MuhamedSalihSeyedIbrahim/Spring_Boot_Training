@@ -25,6 +25,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 	//custom Query using JPQL which use ":<param passed>" to where clause 
 	@Query("SELECT e FROM Employee e Where e.basic>=:lb and e.basic<:ub ")
 	List<Employee> findAllByBasicRange(double lb , double ub);
+	
 	List<Employee> findAllByjoinDate(LocalDate joinDate);
 	
 }
