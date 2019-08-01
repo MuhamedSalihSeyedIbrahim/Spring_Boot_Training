@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Telecom-Application-Using-Springdata-And-WebMVC
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: training
+Implementation-Vendor-Id: com.cts.sbwmd
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Telecom-Application-Using-Springdata-And-WebMVC
+Created-By: Maven Integration for Eclipse
+
