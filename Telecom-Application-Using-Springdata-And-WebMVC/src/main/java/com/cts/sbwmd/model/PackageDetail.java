@@ -24,6 +24,9 @@ public class PackageDetail {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long Id;
+
+
+	private Long planID;
 	
 	@DateTimeFormat(iso=ISO.DATE)
 	private LocalDate SubscriptionStartDate,SubscriptionEndDate;
@@ -87,11 +90,15 @@ public class PackageDetail {
 		Customeropted = customeropted;
 	}
 
-	public PackageDetail(LocalDate subscriptionStartDate, LocalDate subscriptionEndDate,
+
+
+	public PackageDetail(Long id, Long planID, LocalDate subscriptionStartDate, LocalDate subscriptionEndDate,
 			@NotEmpty(message = "Description can not be empty") @NotNull(message = "Description can not be omitted") String description,
 			@NotEmpty(message = "Cost can not be empty") @NotNull(message = "Cost can not be omitted") Double cost,
 			customer customeropted) {
 		super();
+		Id = id;
+		this.planID = planID;
 		SubscriptionStartDate = subscriptionStartDate;
 		SubscriptionEndDate = subscriptionEndDate;
 		Description = description;
@@ -101,6 +108,14 @@ public class PackageDetail {
 
 	public PackageDetail() {
 		super();
+	}
+
+	public Long getPlanID() {
+		return planID;
+	}
+
+	public void setPlanID(Long planID) {
+		this.planID = planID;
 	}
 
 
