@@ -1,5 +1,6 @@
 package com.cts.sbwmd.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -53,7 +54,7 @@ public class customer {
 
 	
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="Id")
 	private PackageDetail packageDetailChoosed;
 
@@ -178,7 +179,8 @@ public class customer {
 	public customer() {
 		super();
 	}
-	
+
+
 	
 	
 }

@@ -54,6 +54,15 @@ Email :
 </div>
 
 <div class="form-group">
+<form:label path="emailId">
+Aadhar : 
+</form:label>
+<form:input path="aadhar" type="number" class="form-control"></form:input>
+<form:errors path="aadhar"></form:errors>
+
+</div>
+
+<div class="form-group">
 <form:label path="simScheme">Schemes : </form:label>
 <form:select path="simScheme" type="text"  >
 <form:option value="">----SELECT----</form:option>

@@ -35,11 +35,9 @@ public class PackageDetail {
 	@NotNull(message = "Description can not be omitted")
 	private String Description;
 	
-	@NotEmpty(message = "Cost can not be empty")
-	@NotNull(message = "Cost can not be omitted")
 	private Double Cost;
 	
-	@OneToOne(mappedBy="packageDetailChoosed",cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="packageDetailChoosed")
 	private customer Customeropted;
 
 	public Long getId() {

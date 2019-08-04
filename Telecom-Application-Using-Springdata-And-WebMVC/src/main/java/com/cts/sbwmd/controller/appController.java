@@ -45,17 +45,19 @@ public class appController {
 	@GetMapping("/saveCustomer")
 	public ModelAndView SaveCustomerWithPackageHandler( @RequestParam(name="id")Long id ) {
 		PackageOffers po=ps.findById(id);
+		customerSession.setPackageDetailChoosed(new PackageDetail());
 		PackageDetail pd=customerSession.getPackageDetailChoosed();
 		
-		if(po!=null) {
+		if((po!=null||customerSession!=null)&&cs.findBycusId(id)==null) {
 			pd.setCost(po.getCost());
 			pd.setDescription(po.getDescription());
 			pd.setPlanID(po.getId());
 			pd.setSubscriptionStartDate(LocalDate.now());
 			pd.setSubscriptionStartDate((LocalDate.now()).plusDays(po.getValidityPeriod()));
-			return new ModelAndView("Report","Detail",customerSession);
+			 cs.save(customerSession);
+			return new ModelAndView("Report","Details",customerSession);
 		}else {
-			return new ModelAndView("/KycFormPage","cus",customerSession);
+			return new ModelAndView("KycFormPage","cus",customerSession);
 		}
 
 	}
