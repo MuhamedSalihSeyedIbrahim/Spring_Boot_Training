@@ -15,13 +15,13 @@ public class BankAccount {
 	
 	@OneToOne
 	@JoinColumn(name="aadhar")
-	private Customer customer;
+	private customer customer;
 	
 	public BankAccount() {
 		super();
 	}
 
-	public BankAccount(String accno, Customer customer) {
+	public BankAccount(String accno, customer customer) {
 		super();
 		this.accno = accno;
 		this.customer = customer;
@@ -35,11 +35,11 @@ public class BankAccount {
 		this.accno = accno;
 	}
 
-	public Customer getCustomer() {
+	public customer getCustomer() {
 		return customer;
 	}
 
-	public void setCustomer(Customer customer) {
+	public void setCustomer(customer customer) {
 		this.customer = customer;
 	}
 

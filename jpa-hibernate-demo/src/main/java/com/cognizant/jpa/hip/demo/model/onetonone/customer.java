@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="AnntcustomerInd")
-public class Customer {
+public class customer {
 	
 	@Id
 	@Column(name="aadhar")
@@ -20,11 +20,11 @@ public class Customer {
 	private BankAccount account;
 	
 	
-	public Customer() {
+	public customer() {
 		super();
 	}
 
-	public Customer(String aadhar, String name, BankAccount account) {
+	public customer(String aadhar, String name, BankAccount account) {
 		super();
 		this.aadhar = aadhar;
 		this.name = name;

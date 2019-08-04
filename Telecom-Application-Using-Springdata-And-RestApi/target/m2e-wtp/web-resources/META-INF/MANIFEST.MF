@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Telecom-Application-Using-Springdata-And-RestApi
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: HP
+Implementation-Vendor-Id: com.cts.sbwmd
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Telecom-Application-Using-Springdata-And-RestApi
+Created-By: Maven Integration for Eclipse
+
